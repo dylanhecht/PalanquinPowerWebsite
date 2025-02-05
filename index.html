@@ -36,11 +36,65 @@
             height: auto;
             margin-bottom: 2rem;
         }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
-    <img src="image.png" alt="Palanquin Power Logo" class="logo">
-    <h1>Palanquin Power</h1>
-    <p>Empowering the future of energy solutions.</p>
+    <div class="container">
+        <img src="image.png" alt="Palanquin Power Logo" class="logo">
+        <h1>Palanquin Power</h1>
+        <p>Ultra-efficient power conversion solutions for data centers</p>
+
+        <section>
+            <h2>Our Innovation</h2>
+            <p>Led by founder and CEO Michael Solomentsev, we're revolutionizing data center power efficiency through innovative series-connected load technology, achieving 99%+ efficiency in power conversion.</p>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>99%+</h3>
+                    <p>Power Conversion Efficiency</p>
+                </div>
+                <div class="stat-box">
+                    <h3>200B kWh</h3>
+                    <p>US Data Center Power Usage (2022)</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Our Impact</h2>
+            <p>With data centers consuming approximately 4% of total US electricity generation and AI driving increasing demand, our technology provides a critical solution for sustainable data center operations.</p>
+        </section>
+    </div>
 </body>
 </html> 
