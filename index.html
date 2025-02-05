@@ -4,96 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palanquin Power</title>
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #6b46c1 0%, #4299e1 100%);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: white;
-            text-align: center;
-            padding: 20px;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'gradient-custom': 'linear-gradient(135deg, rgb(107, 70, 193) 0%, rgb(66, 153, 225) 100%)',
+                    }
+                }
+            }
         }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-
-        .logo {
-            max-width: 300px;  /* adjust size as needed */
-            height: auto;
-            margin-bottom: 2rem;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            backdrop-filter: blur(5px);
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .stat-box {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 1rem;
-            border-radius: 8px;
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <div class="container">
-        <img src="image.png" alt="Palanquin Power Logo" class="logo">
-        <h1>Palanquin Power</h1>
-        <p>Ultra-efficient power conversion solutions for data centers</p>
+<body class="min-h-screen bg-gradient-custom text-white flex flex-col items-center p-6">
+    <div class="container max-w-3xl mx-auto">
+        <img src="image.png" alt="Palanquin Power Logo" class="max-w-[300px] h-auto mb-8 mx-auto">
+        <h1 class="text-5xl font-bold mb-4 text-center">Palanquin Power</h1>
+        <p class="text-xl text-center mb-12">Ultra-efficient power conversion solutions for data centers</p>
 
-        <section>
-            <h2>Our Innovation</h2>
-            <p>Led by founder and CEO Michael Solomentsev, we're revolutionizing data center power efficiency through innovative series-connected load technology, achieving 99%+ efficiency in power conversion.</p>
+        <section class="bg-white/10 backdrop-blur-sm p-8 rounded-lg mb-8">
+            <h2 class="text-3xl font-bold mb-4">Our Innovation</h2>
+            <p class="text-lg mb-8">Led by founder and CEO Michael Solomentsev, we're revolutionizing data center power efficiency through innovative series-connected load technology, achieving 99%+ efficiency in power conversion.</p>
             
-            <div class="stats">
-                <div class="stat-box">
-                    <h3>99%+</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white/15 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold">99%+</h3>
                     <p>Power Conversion Efficiency</p>
                 </div>
-                <div class="stat-box">
-                    <h3>200B kWh</h3>
+                <div class="bg-white/15 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold">200B kWh</h3>
                     <p>US Data Center Power Usage (2022)</p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Our Impact</h2>
-            <p>With data centers consuming approximately 4% of total US electricity generation and AI driving increasing demand, our technology provides a critical solution for sustainable data center operations.</p>
+        <section class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+            <h2 class="text-3xl font-bold mb-4">Our Impact</h2>
+            <p class="text-lg">With data centers consuming approximately 4% of total US electricity generation and AI driving increasing demand, our technology provides a critical solution for sustainable data center operations.</p>
         </section>
     </div>
 </body>
